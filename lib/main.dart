@@ -1,15 +1,3 @@
-// import 'package:flutter/material.dart';
-// import 'package:learningdart/gradient_container.dart';
-
-// void main() {
-//   runApp(
-//     const MaterialApp(
-//       home: Scaffold(
-//         body: GradientContainer(Color.fromARGB(255, 3, 4, 46),Color.fromARGB(255, 16, 31, 130)),
-//       ),
-//     ),
-//   );
-// }
 import 'package:flutter/material.dart';
 
 void main() => runApp(const MyApp());
