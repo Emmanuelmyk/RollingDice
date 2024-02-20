@@ -1,23 +1,33 @@
+// import 'dart:ffi';
+
 import 'package:flutter/material.dart';
-import './styled_text.dart';
+import 'package:learningdart/dice_roller.dart';
+// import './styled_text.dart';
 
 class GradientContainer extends StatelessWidget {
-  const GradientContainer({super.key});
+  const GradientContainer(
+    this.color1,
+    this.color2, {
+    super.key,
+  });
+
+  final Color color1;
+  final Color color2;
+
+  
 
   @override
   Widget build(context) {
     return Container(
-      decoration: const BoxDecoration(
-        gradient: LinearGradient(
-          colors: [
-            Color.fromARGB(255, 57, 26, 111),
-            Color.fromARGB(255, 216, 7, 7),
-          ],
-          begin: Alignment.topLeft,
-          end: Alignment.bottomRight,
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            colors: [color1, color2],
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
+          ),
         ),
-      ),
-      child: const StyledText("Jollof Central"),
-    );
-  } 
+        child: const Center(
+          child: DiceRoller(),
+        ),);
+  }
 }
